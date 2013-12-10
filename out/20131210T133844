@@ -1,0 +1,630 @@
+PTB-INFO: Multi-display setup in explicit multi-display mode detected. Using the following mapping:
+PTB-INFO: Screen 0 corresponds to the full Windows desktop area. Useful for stereo presentations in stereomode=4 ...
+PTB-INFO: Screen 1 corresponds to the display area of the monitor with the Windows-internal name \\.\DISPLAY1 ...
+PTB-INFO: Screen 2 corresponds to the display area of the monitor with the Windows-internal name \\.\DISPLAY2 ...
+PTB-WARNING: Screens 1 and 2 do have non-equal width and height. This will probably cause wrong behaviour
+PTB-WARNING: when trying to open a fullscreen window on Screen 0 that is supposed to fully cover displays 1 and 2.
+PTB-WARNING: In that case, either change your screen settings to matching size and refresh rate in the display control
+PTB-WARNING: panel and retry after a 'clear all', or manually specify a [rect] parameter for the window in the
+PTB-WARNING: Screen('OpenWindow', 0, [color], [rect]); command to manually enforce creation of a proper onscreen window.
+
+INFO: Initial invocation of the PsychHID mex file failed.
+INFO: Most likely a required DLL is not installed in your system, e.g., libusb-1.0.dll
+INFO: I will now check if this is the culprit and work around it. To avoid future warnings,
+INFO: please copy the 32-Bit libusb-1.0.dll from the PsychContributed folder into your C:\WINDOWS\system32\ 
+INFO: folder or - on a 64-Bit Windows setup into the C:\WINDOWS\SysWOW64\ - 
+INFO: folder or a similarly appropriate place. You can get a fresher copy of libusb-1.0.dll from 
+INFO: http://libusb.org/wiki/windows_backend if you want to stay up to date.
+INFO: Retrying now, may fail...
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 32-Bit (Version 3.0.10 - Build date: May 22 2013).
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAM', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro 2000/PCI/SSE2 :: 4.1.0
+PTB-INFO: VBL startline = 1050 , VBL Endline = 1049
+PTB-INFO: Measured monitor refresh interval from beamposition = 18.742007 ms [53.356078 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.685888 ms [59.930882 Hz]. (231 valid samples taken, stddev=0.199842 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+PTB-INFO: Support for fast OffscreenWindows enabled.
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 4 times out of a total of 63 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
+
+fclose all
+
+ans =
+
+     0
+
+debug = 1
+
+debug =
+
+     1
+
+runIdentityMorph(debug)
+
+IdentityMorph (runIdentityMorph.m): Key set-up ...
+
+IdentityMorph (runIdentityMorph.m): Done!
+
+IdentityMorph (runIdentityMorph.m): Monitor set-up ...
+
+IdentityMorph (runIdentityMorph.m): Done!
+
+IdentityMorph (runIdentityMorph.m): Experimental condition set-up ...
+
+IdentityMorph (runIdentityMorph.m): Done!
+
+IdentityMorph (runIdentityMorph.m): Window set-up ...
+
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 32-Bit (Version 3.0.10 - Build date: May 22 2013).
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-INFO: Will disable DWM because a regular fullscreen onscreen window is opened -> We want best timing and performance.
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAM', section 'kPsychUseBeampositionQueryWorkaround'.
+
+
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: Quadro 2000/PCI/SSE2 :: 4.1.0
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1079
+PTB-INFO: Measured monitor refresh interval from beamposition = 18.705347 ms [53.460650 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.659169 ms [60.027003 Hz]. (50 valid samples taken, stddev=0.093582 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-WARNING: ==============================================================================================================
+PTB-WARNING: WINDOWS SYSTEM IS RUNNING IN MULTI-DISPLAY MODE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE LIKELY UNRELIABLE!
+PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE SEVERELY REDUCED!
+PTB-WARNING: DO NOT USE MULTI-DISPLAY MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
+PTB-WARNING: ==============================================================================================================
+PTB-INFO: Support for fast OffscreenWindows enabled.
+
+IdentityMorph: Done!
+
+IdentityMorph (runIdentityMorph.m): Beginning practice ...
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_prac_joe_bl07.bmp
+main.m (cycle): threshcalc - 70
+main.m (cycle): Next image name - face_prac_joe_bl06.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_prac_joe_bl06.bmp
+main.m (cycle): threshcalc - 60
+main.m (cycle): Next image name - face_prac_joe_bl05.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_prac_joe_bl05.bmp
+main.m (cycle): threshcalc - 50
+main.m (cycle): Next image name - face_prac_joe_bl04.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_prac_joe_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_prac_joe_bl03.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_prac_joe_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_prac_joe_bl02.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_prac_joe_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_prac_joe_bl02.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_prac_joe_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_prac_joe_bl02.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_prac_joe_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_prac_joe_bl02.bmp
+main.m (cycle): Track number - 0
+
+IdentityMorph (runIdentityMorph.m): Done!
+
+IdentityMorph (runIdentityMorph.m): Beginning task ...
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_mike_bl07.bmp
+main.m (cycle): threshcalc - 70
+main.m (cycle): Next image name - face_test_mike_bl06.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_mike_bl06.bmp
+main.m (cycle): threshcalc - 60
+main.m (cycle): Next image name - face_test_mike_bl05.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_mike_bl05.bmp
+main.m (cycle): threshcalc - 50
+main.m (cycle): Next image name - face_test_mike_bl04.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_mike_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_mike_bl03.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_mike_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_mike_bl02.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_mike_bl02.bmp
+main.m (cycle): threshcalc - 25
+main.m (cycle): Next image name - face_test_mike_bl04.bmp
+main.m (cycle): Track number - 1
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_mike_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_mike_bl03.bmp
+main.m (cycle): Track number - 1
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_mike_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_mike_bl05.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_mike_bl05.bmp
+main.m (cycle): threshcalc - 50
+main.m (cycle): Next image name - face_test_mike_bl04.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_mike_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_mike_bl03.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_mike_bl03.bmp
+main.m (cycle): threshcalc - 32.5
+main.m (cycle): Next image name - face_test_mike_bl05.bmp
+main.m (cycle): Track number - 3
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_mike_bl05.bmp
+main.m (cycle): threshcalc - 50
+main.m (cycle): Next image name - face_test_mike_bl04.bmp
+main.m (cycle): Track number - 3
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_mike_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_mike_bl03.bmp
+main.m (cycle): Track number - 3
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_mike_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_mike_bl02.bmp
+main.m (cycle): Track number - 3
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_mike_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_mike_bl02.bmp
+main.m (cycle): Track number - 3
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_mike_bl02.bmp
+main.m (cycle): threshcalc - 26.25
+main.m (cycle): Next image name - face_test_mike_bl04.bmp
+main.m (cycle): Track number - 4
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_mike_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_mike_bl03.bmp
+main.m (cycle): Track number - 4
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_mike_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_mike_bl02.bmp
+main.m (cycle): Track number - 4
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_mike_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_mike_bl02.bmp
+main.m (cycle): Track number - 4
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_mike_bl02.bmp
+main.m (cycle): threshcalc - 23.125
+main.m (cycle): Next image name - face_test_mike_bl02.bmp
+main.m (cycle): Track number - 5
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_bob_bl07.bmp
+main.m (cycle): threshcalc - 70
+main.m (cycle): Next image name - face_test_bob_bl06.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_bob_bl06.bmp
+main.m (cycle): threshcalc - 60
+main.m (cycle): Next image name - face_test_bob_bl05.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_bob_bl05.bmp
+main.m (cycle): threshcalc - 50
+main.m (cycle): Next image name - face_test_bob_bl04.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_bob_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_bob_bl03.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_bob_bl03.bmp
+main.m (cycle): threshcalc - 35
+main.m (cycle): Next image name - face_test_bob_bl05.bmp
+main.m (cycle): Track number - 1
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_bob_bl05.bmp
+main.m (cycle): threshcalc - 50
+main.m (cycle): Next image name - face_test_bob_bl04.bmp
+main.m (cycle): Track number - 1
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_bob_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_bob_bl03.bmp
+main.m (cycle): Track number - 1
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_bob_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_bob_bl02.bmp
+main.m (cycle): Track number - 1
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_bob_bl02.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_bob_bl04.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_bob_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_bob_bl03.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_bob_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_bob_bl02.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_bob_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_bob_bl02.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_bob_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_bob_bl02.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_bob_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_bob_bl02.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_claire_bl07.bmp
+main.m (cycle): threshcalc - 70
+main.m (cycle): Next image name - face_test_claire_bl06.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_claire_bl06.bmp
+main.m (cycle): threshcalc - 60
+main.m (cycle): Next image name - face_test_claire_bl05.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_claire_bl05.bmp
+main.m (cycle): threshcalc - 50
+main.m (cycle): Next image name - face_test_claire_bl04.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_claire_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_claire_bl03.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_claire_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_claire_bl02.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_claire_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_claire_bl02.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_claire_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_claire_bl02.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_claire_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_claire_bl04.bmp
+main.m (cycle): Track number - 1
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_claire_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_claire_bl03.bmp
+main.m (cycle): Track number - 1
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_claire_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_claire_bl02.bmp
+main.m (cycle): Track number - 1
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_claire_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_claire_bl02.bmp
+main.m (cycle): Track number - 1
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_claire_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_claire_bl02.bmp
+main.m (cycle): Track number - 1
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_claire_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_claire_bl04.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_claire_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_claire_bl03.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_claire_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_claire_bl02.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_claire_bl02.bmp
+main.m (cycle): threshcalc - 22.5
+main.m (cycle): Next image name - face_test_claire_bl04.bmp
+main.m (cycle): Track number - 3
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_claire_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_claire_bl03.bmp
+main.m (cycle): Track number - 3
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_claire_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_claire_bl02.bmp
+main.m (cycle): Track number - 3
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_claire_bl02.bmp
+main.m (cycle): threshcalc - 23.75
+main.m (cycle): Next image name - face_test_claire_bl04.bmp
+main.m (cycle): Track number - 4
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_claire_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_claire_bl03.bmp
+main.m (cycle): Track number - 4
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_claire_bl03.bmp
+main.m (cycle): threshcalc - 29.375
+main.m (cycle): Next image name - face_test_claire_bl03.bmp
+main.m (cycle): Track number - 5
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_paige_bl07.bmp
+main.m (cycle): threshcalc - 70
+main.m (cycle): Next image name - face_test_paige_bl06.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_paige_bl06.bmp
+main.m (cycle): threshcalc - 60
+main.m (cycle): Next image name - face_test_paige_bl05.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_paige_bl05.bmp
+main.m (cycle): threshcalc - 50
+main.m (cycle): Next image name - face_test_paige_bl04.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_paige_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_paige_bl03.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_paige_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_paige_bl02.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_paige_bl02.bmp
+main.m (cycle): threshcalc - 25
+main.m (cycle): Next image name - face_test_paige_bl04.bmp
+main.m (cycle): Track number - 1
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_paige_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_paige_bl03.bmp
+main.m (cycle): Track number - 1
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_paige_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_paige_bl02.bmp
+main.m (cycle): Track number - 1
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_paige_bl02.bmp
+main.m (cycle): threshcalc - 25
+main.m (cycle): Next image name - face_test_paige_bl04.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_paige_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_paige_bl03.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_paige_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_paige_bl02.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_paige_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_paige_bl02.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_paige_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_paige_bl02.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_paige_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_paige_bl02.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_jim_bl07.bmp
+main.m (cycle): threshcalc - 70
+main.m (cycle): Next image name - face_test_jim_bl06.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_jim_bl06.bmp
+main.m (cycle): threshcalc - 60
+main.m (cycle): Next image name - face_test_jim_bl05.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_jim_bl05.bmp
+main.m (cycle): threshcalc - 50
+main.m (cycle): Next image name - face_test_jim_bl04.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_jim_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_jim_bl03.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_jim_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_jim_bl02.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_jim_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_jim_bl02.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_jim_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_jim_bl02.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_jim_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_jim_bl02.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_kate_bl07.bmp
+main.m (cycle): threshcalc - 70
+main.m (cycle): Next image name - face_test_kate_bl06.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_kate_bl06.bmp
+main.m (cycle): threshcalc - 60
+main.m (cycle): Next image name - face_test_kate_bl05.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_kate_bl05.bmp
+main.m (cycle): threshcalc - 50
+main.m (cycle): Next image name - face_test_kate_bl04.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_kate_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_kate_bl03.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_kate_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_kate_bl02.bmp
+main.m (cycle): Track number - 0
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_kate_bl02.bmp
+main.m (cycle): threshcalc - 25
+main.m (cycle): Next image name - face_test_kate_bl04.bmp
+main.m (cycle): Track number - 1
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_kate_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_kate_bl03.bmp
+main.m (cycle): Track number - 1
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_kate_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_kate_bl05.bmp
+main.m (cycle): Track number - 2
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_kate_bl05.bmp
+main.m (cycle): threshcalc - 35
+main.m (cycle): Next image name - face_test_kate_bl07.bmp
+main.m (cycle): Track number - 3
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_kate_bl07.bmp
+main.m (cycle): threshcalc - 70
+main.m (cycle): Next image name - face_test_kate_bl06.bmp
+main.m (cycle): Track number - 3
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_kate_bl06.bmp
+main.m (cycle): threshcalc - 60
+main.m (cycle): Next image name - face_test_kate_bl05.bmp
+main.m (cycle): Track number - 3
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_kate_bl05.bmp
+main.m (cycle): threshcalc - 50
+main.m (cycle): Next image name - face_test_kate_bl04.bmp
+main.m (cycle): Track number - 3
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_kate_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_kate_bl03.bmp
+main.m (cycle): Track number - 3
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_kate_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_kate_bl02.bmp
+main.m (cycle): Track number - 3
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_kate_bl02.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_kate_bl04.bmp
+main.m (cycle): Track number - 4
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_kate_bl04.bmp
+main.m (cycle): threshcalc - 40
+main.m (cycle): Next image name - face_test_kate_bl03.bmp
+main.m (cycle): Track number - 4
+main.m (cycle): Correct!
+main.m (cyc
