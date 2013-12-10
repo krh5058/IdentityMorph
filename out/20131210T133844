@@ -627,4 +627,315 @@ main.m (cycle): threshcalc - 40
 main.m (cycle): Next image name - face_test_kate_bl03.bmp
 main.m (cycle): Track number - 4
 main.m (cycle): Correct!
-main.m (cyc
+main.m (cycle): Image name - face_test_kate_bl03.bmp
+main.m (cycle): threshcalc - 30
+main.m (cycle): Next image name - face_test_kate_bl02.bmp
+main.m (cycle): Track number - 4
+main.m (cycle): Correct!
+main.m (cycle): Image name - face_test_kate_bl02.bmp
+main.m (cycle): threshcalc - 20
+main.m (cycle): Next image name - face_test_kate_bl02.bmp
+main.m (cycle): Track number - 4
+main.m (cycle): Incorrect!
+main.m (cycle): Image name - face_test_kate_bl02.bmp
+main.m (cycle): threshcalc - 25
+main.m (cycle): Next image name - face_test_kate_bl02.bmp
+main.m (cycle): Track number - 5
+
+IdentityMorph (runIdentityMorph.m): Done!
+
+
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 4 times out of a total of 220 flips during this session.
+
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
+
+fclose all          
+
+ans =
+
+     0
+
+runIdentityMorph(debug)
+
+IdentityMorph (runIdentityMorph.m): Key set-up ...
+
+IdentityMorph (runIdentityMorph.m): Done!
+
+IdentityMorph (runIdentityMorph.m): Monitor set-up ...
+
+IdentityMorph (runIdentityMorph.m): Done!
+
+IdentityMorph (runIdentityMorph.m): Experimental condition set-up ...
+
+IdentityMorph (runIdentityMorph.m): Done!
+<a href="matlab: opentoline('C:\Users\krh5058\Documents\SLEIC\Scherf\IdentityMorph\runIdentityMorph.m',91,1)">91  </a>try
+[img, img0, imgnames, img0name] = obj.imgload()
+<a href="matlab: opentoline('C:\Users\krh5058\Documents\SLEIC\Scherf\IdentityMorph\bin\main.m',52,1)">52  </a>                [~,d] = system(['dir /b ' path filesep '*' name '*' ext]);
+[~,d] = system(['dir /b ' path filesep '*' name '*' ext])
+
+d =
+
+car_prac_jess_1701.bmp
+car_prac_jess_1702.bmp
+car_prac_jess_1703.bmp
+car_prac_jess_1704.bmp
+car_prac_jess_1705.bmp
+car_prac_jess_1706.bmp
+car_prac_jess_1707.bmp
+car_prac_jess_1708.bmp
+car_prac_jess_1709.bmp
+car_test_bill_301.bmp
+car_test_bill_302.bmp
+car_test_bill_303.bmp
+car_test_bill_304.bmp
+car_test_bill_305.bmp
+car_test_bill_306.bmp
+car_test_bill_307.bmp
+car_test_bill_308.bmp
+car_test_bill_309.bmp
+car_test_brooke_1901.bmp
+car_test_brooke_1902.bmp
+car_test_brooke_1903.bmp
+car_test_brooke_1904.bmp
+car_test_brooke_1905.bmp
+car_test_brooke_1906.bmp
+car_test_brooke_1907.bmp
+car_test_brooke_1908.bmp
+car_test_brooke_1909.bmp
+car_test_jane_801.bmp
+car_test_jane_802.bmp
+car_test_jane_803.bmp
+car_test_jane_804.bmp
+car_test_jane_805.bmp
+car_test_jane_806.bmp
+car_test_jane_807.bmp
+car_test_jane_808.bmp
+car_test_jane_809.bmp
+car_test_kim_3101.bmp
+car_test_kim_3102.bmp
+car_test_kim_3103.bmp
+car_test_kim_3104.bmp
+car_test_kim_3105.bmp
+car_test_kim_3106.bmp
+car_test_kim_3107.bmp
+car_test_kim_3108.bmp
+car_test_kim_3109.bmp
+car_test_matt_2901.bmp
+car_test_matt_2902.bmp
+car_test_matt_2903.bmp
+car_test_matt_2904.bmp
+car_test_matt_2905.bmp
+car_test_matt_2906.bmp
+car_test_matt_2907.bmp
+car_test_matt_2908.bmp
+car_test_matt_2909.bmp
+car_test_scott_2801.bmp
+car_test_scott_2802.bmp
+car_test_scott_2803.bmp
+car_test_scott_2804.bmp
+car_test_scott_2805.bmp
+car_test_scott_2806.bmp
+car_test_scott_2807.bmp
+car_test_scott_2808.bmp
+car_test_scott_2809.bmp
+face_prac_joe_bl01.bmp
+face_prac_joe_bl02.bmp
+face_prac_joe_bl03.bmp
+face_prac_joe_bl04.bmp
+face_prac_joe_bl05.bmp
+face_prac_joe_bl06.bmp
+face_prac_joe_bl07.bmp
+face_prac_joe_bl08.bmp
+face_prac_joe_bl09.bmp
+face_test_bob_bl01.bmp
+face_test_bob_bl02.bmp
+face_test_bob_bl03.bmp
+face_test_bob_bl04.bmp
+face_test_bob_bl05.bmp
+face_test_bob_bl06.bmp
+face_test_bob_bl07.bmp
+face_test_bob_bl08.bmp
+face_test_bob_bl09.bmp
+face_test_claire_bl01.bmp
+face_test_claire_bl02.bmp
+face_test_claire_bl03.bmp
+face_test_claire_bl04.bmp
+face_test_claire_bl05.bmp
+face_test_claire_bl06.bmp
+face_test_claire_bl07.bmp
+face_test_claire_bl08.bmp
+face_test_claire_bl09.bmp
+face_test_jim_bl01.bmp
+face_test_jim_bl02.bmp
+face_test_jim_bl03.bmp
+face_test_jim_bl04.bmp
+face_test_jim_bl05.bmp
+face_test_jim_bl06.bmp
+face_test_jim_bl07.bmp
+face_test_jim_bl08.bmp
+face_test_jim_bl09.bmp
+face_test_kate_bl01.bmp
+face_test_kate_bl02.bmp
+face_test_kate_bl03.bmp
+face_test_kate_bl04.bmp
+face_test_kate_bl05.bmp
+face_test_kate_bl06.bmp
+face_test_kate_bl07.bmp
+face_test_kate_bl08.bmp
+face_test_kate_bl09.bmp
+face_test_mike_bl01.bmp
+face_test_mike_bl02.bmp
+face_test_mike_bl03.bmp
+face_test_mike_bl04.bmp
+face_test_mike_bl05.bmp
+face_test_mike_bl06.bmp
+face_test_mike_bl07.bmp
+face_test_mike_bl08.bmp
+face_test_mike_bl09.bmp
+face_test_paige_bl01.bmp
+face_test_paige_bl02.bmp
+face_test_paige_bl03.bmp
+face_test_paige_bl04.bmp
+face_test_paige_bl05.bmp
+face_test_paige_bl06.bmp
+face_test_paige_bl07.bmp
+face_test_paige_bl08.bmp
+face_test_paige_bl09.bmp
+
+
+d
+
+d =
+
+car_prac_jess_1701.bmp
+car_prac_jess_1702.bmp
+car_prac_jess_1703.bmp
+car_prac_jess_1704.bmp
+car_prac_jess_1705.bmp
+car_prac_jess_1706.bmp
+car_prac_jess_1707.bmp
+car_prac_jess_1708.bmp
+car_prac_jess_1709.bmp
+car_test_bill_301.bmp
+car_test_bill_302.bmp
+car_test_bill_303.bmp
+car_test_bill_304.bmp
+car_test_bill_305.bmp
+car_test_bill_306.bmp
+car_test_bill_307.bmp
+car_test_bill_308.bmp
+car_test_bill_309.bmp
+car_test_brooke_1901.bmp
+car_test_brooke_1902.bmp
+car_test_brooke_1903.bmp
+car_test_brooke_1904.bmp
+car_test_brooke_1905.bmp
+car_test_brooke_1906.bmp
+car_test_brooke_1907.bmp
+car_test_brooke_1908.bmp
+car_test_brooke_1909.bmp
+car_test_jane_801.bmp
+car_test_jane_802.bmp
+car_test_jane_803.bmp
+car_test_jane_804.bmp
+car_test_jane_805.bmp
+car_test_jane_806.bmp
+car_test_jane_807.bmp
+car_test_jane_808.bmp
+car_test_jane_809.bmp
+car_test_kim_3101.bmp
+car_test_kim_3102.bmp
+car_test_kim_3103.bmp
+car_test_kim_3104.bmp
+car_test_kim_3105.bmp
+car_test_kim_3106.bmp
+car_test_kim_3107.bmp
+car_test_kim_3108.bmp
+car_test_kim_3109.bmp
+car_test_matt_2901.bmp
+car_test_matt_2902.bmp
+car_test_matt_2903.bmp
+car_test_matt_2904.bmp
+car_test_matt_2905.bmp
+car_test_matt_2906.bmp
+car_test_matt_2907.bmp
+car_test_matt_2908.bmp
+car_test_matt_2909.bmp
+car_test_scott_2801.bmp
+car_test_scott_2802.bmp
+car_test_scott_2803.bmp
+car_test_scott_2804.bmp
+car_test_scott_2805.bmp
+car_test_scott_2806.bmp
+car_test_scott_2807.bmp
+car_test_scott_2808.bmp
+car_test_scott_2809.bmp
+face_prac_joe_bl01.bmp
+face_prac_joe_bl02.bmp
+face_prac_joe_bl03.bmp
+face_prac_joe_bl04.bmp
+face_prac_joe_bl05.bmp
+face_prac_joe_bl06.bmp
+face_prac_joe_bl07.bmp
+face_prac_joe_bl08.bmp
+face_prac_joe_bl09.bmp
+face_test_bob_bl01.bmp
+face_test_bob_bl02.bmp
+face_test_bob_bl03.bmp
+face_test_bob_bl04.bmp
+face_test_bob_bl05.bmp
+face_test_bob_bl06.bmp
+face_test_bob_bl07.bmp
+face_test_bob_bl08.bmp
+face_test_bob_bl09.bmp
+face_test_claire_bl01.bmp
+face_test_claire_bl02.bmp
+face_test_claire_bl03.bmp
+face_test_claire_bl04.bmp
+face_test_claire_bl05.bmp
+face_test_claire_bl06.bmp
+face_test_claire_bl07.bmp
+face_test_claire_bl08.bmp
+face_test_claire_bl09.bmp
+face_test_jim_bl01.bmp
+face_test_jim_bl02.bmp
+face_test_jim_bl03.bmp
+face_test_jim_bl04.bmp
+face_test_jim_bl05.bmp
+face_test_jim_bl06.bmp
+face_test_jim_bl07.bmp
+face_test_jim_bl08.bmp
+face_test_jim_bl09.bmp
+face_test_kate_bl01.bmp
+face_test_kate_bl02.bmp
+face_test_kate_bl03.bmp
+face_test_kate_bl04.bmp
+face_test_kate_bl05.bmp
+face_test_kate_bl06.bmp
+face_test_kate_bl07.bmp
+face_test_kate_bl08.bmp
+face_test_kate_bl09.bmp
+face_test_mike_bl01.bmp
+face_test_mike_bl02.bmp
+face_test_mike_bl03.bmp
+face_test_mike_bl04.bmp
+face_test_mike_bl05.bmp
+face_test_mike_bl06.bmp
+face_test_mike_bl07.bmp
+face_test_mike_bl08.bmp
+face_test_mike_bl09.bmp
+face_test_paige_bl01.bmp
+face_test_paige_bl02.bmp
+face_test_paige_bl03.bmp
+face_test_paige_bl04.bmp
+face_test_paige_bl05.bmp
+face_test_paige_bl06.bmp
+face_test_paige_bl07.bmp
+face_test_paige_bl08.bmp
+face_test_paige_bl0

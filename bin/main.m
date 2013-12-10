@@ -47,7 +47,7 @@ classdef main < handle
             end
             
             if ismac
-                [~,d] = system(['ls ' path filesep '*' name '*' ext]);
+                [~,d] = system(['ls ' path filesep '*' name '*' ext ' | xargs -n1 basename']);
             elseif ispc
                 [~,d] = system(['dir /b ' path filesep '*' name '*' ext]);
             else
