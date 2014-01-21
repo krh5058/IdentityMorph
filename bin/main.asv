@@ -2,7 +2,7 @@ classdef main < handle
 % main.m class for Expression and similar tasks.
     
     properties
-        debug = 0;
+        debug = 1;
         
         subjinfo
         condition = {'Face','Car'};
